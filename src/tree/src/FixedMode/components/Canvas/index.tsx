@@ -66,6 +66,7 @@ const Canvas: React.FC<IProps> = (props) => {
   const canvasData = useMemo(() => {
     if (data.length === 0) {
       return [
+        // 从注册的节点中创建相应的类型
         createNewNodeData(registerNodes, 'start'),
         createNewNodeData(registerNodes, 'end'),
       ];

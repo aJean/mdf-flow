@@ -14,6 +14,11 @@ NodeItem、NodeWrap、NodeComponent 组成一个完成的 ui node，其中 NodeC
 - 可扩展的 nodeSchema 用于辅助渲染器判断 ui 类型，例如开始节点、结束节点、分支节点、条件节点等...
 - NodeComponent 是一种 display ui，数据中可以指定用那种组件来展示样式，但分支节点还是条件节点要看是否有对应的数据结构（branchs)
 
+### 修改节点
+每一个节点都会对应一个绑定数据 nodeData，这个数据记录在操作组件中，增加删除节点时基于这个 nodeData 对原始的 list 进行修改
+然后整体更新 list
+修改方法在最外层控制，也就是获取 list 的那一层
+
 ### schema
 用于描述节点类型、ui、行为，可以使元数据与业务数据分离，更便于扩展
 - displayComponent
