@@ -6,7 +6,7 @@
 
 ### 外部渲染模式
 NodeItem、NodeWrap、NodeComponent 组成一个完成的 ui node，其中 NodeComponent 只负责节点文本区域，可以进行注册
-- 渲染器负责循环 nodeList，判断渲染类型，组合上面的三中 node 元件
+- 渲染器负责循环 nodeList，判断渲染类型，组合上面的三类 node 元件
 - 渲染器负责传入 node children
 - 操作 action 时通过 id 遍历 nodeList，找到当前操作的节点，进行处理
 - 任何节点的变化直接对 nodeList 进行修改即可更新 view
